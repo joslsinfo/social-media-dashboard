@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ButtonNumber3SocialMedia = ({ onMouseLeave, onMouseEnter, children }) => {
-  const [number, setNumber] = useState(11000);
+  const [number, setNumber] = useState(87);
 
 
   // Une fonction pour incrémenter
