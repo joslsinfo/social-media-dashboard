@@ -1,13 +1,289 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root{
+  /*Primary colors*/
+  --lime-green: hsl(163, 72%, 41%); /*Lime Green*/
+  --bright-red: hsl(356, 69%, 56%); /*Bright Red*/
+  --facebook: hsl(208, 92%, 53%); /* Facebook*/
+  --twitter: hsl(203, 89%, 53%); /*Twitter: hsl(203, 89%, 53%)*/
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%); /*Instagram*/
+  --youTube: hsl(348, 97%, 39%); /*YouTube: hsl(348, 97%, 39%)*/
+  
+   
+  
+  /*Dark theme*/
+  --toggle: hsl(230, 22%, 74%);
+  --toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%); /*Toggle*/
+   
+  /*Light theme*/
+   --toggle: hsl(230, 22%, 74%); /* Toggle*/
+  
+  
+    /*Dark theme*/
+    
+    --very-dark-blue-bg: hsl(230, 17%, 14%); /*Very Dark Blue (BG)*/
+    --very-dark-blue-top-bg-pattern:  hsl(232, 19%, 15%); /*Very Dark Blue (Top BG Pattern)*/
+    --dark-desaturated-blue-card-bg: hsl(228, 28%, 20%); /* Dark Desaturated Blue (Card BG)*/
+    --dark-desaturated-blue-text:hsl(228, 34%, 66%); /*Desaturated Blue (Text)*/
+    --white-text:  hsl(0, 0%, 100%); /*White (Text)*/
+  
+       
+  
+    }
+  
+    [data-theme='dark'] {
+    
+      --very-dark-blue-bg: hsl(230, 17%, 14%); /*Very Dark Blue (BG)*/
+      --very-dark-blue-top-bg-pattern:  hsl(232, 19%, 15%); /*Very Dark Blue (Top BG Pattern)*/
+      --dark-desaturated-blue-card-bg: hsl(228, 28%, 20%); /* Dark Desaturated Blue (Card BG)*/
+      --dark-desaturated-blue-text:hsl(228, 34%, 66%); /*Desaturated Blue (Text)*/
+      --white-text:  hsl(0, 0%, 100%); /*White (Text)*/
+      --toggle: hsl(230, 22%, 74%);
+      --toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%); /*Toggle*/
+    
+    }
+  
+  
+    [data-theme='light'] {
+        /*Light theme*/
+        --white-bg: hsl(0, 0%, 100%); /* White (BG)*/
+        --very-pale-blue-top-bg-pattern:  hsl(225, 100%, 98%); /*Very Pale Blue (Top BG Pattern)*/
+        --light-grayish-blue-card-bg: hsl(227, 47%, 96%); /*Light Grayish Blue (Card BG)*/
+        --dark-grayish-blue-text: hsl(228, 12%, 44%); /*Dark Grayish Blue (Text)*/
+        --very-dark-blue-text: hsl(230, 17%, 14%) /*Very Dark Blue (Text)*/
+      
+    }
+  
+  
+   
+  
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      
+    }
+  
+    body{
+      background-color: var(--very-dark-blue-bg);
+      min-height: 100vh;
+      min-width: 100vw;
+      display: grid;
+      place-items: center;
+      font-family: 'Inter', sans-serif;
+      }
+  
+  
+      .app {
+        background-color: var(--very-pale-blue-top-bg-pattern);
+        color: var(--very-dark-blue-top-bg-pattern);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: .8rem;
+        transition: all .5s;
+      }
+  
+  
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        width: 80vw;
+        margin: auto;
+        box-shadow: 0px 0px 12px var(--border);
+        border-radius: 8px;
+        background-color: var(--dark-desaturated-blue-card-bg);
+     
+        
+      }
+  
+      
+     
+      .cards{
+       width:100%;
+       background-color: var(--very-dark-blue-bg);
+       margin:0 auto;
+       display: flex;
+       justify-content: space-between;
+        
+      }
+  
+      .cards__items{
+        width:100%;
+      }
+  
+      .onHover{
+         background-color: var(--dark-desaturated-blue-card-bg);
+      
+        
+      }
+      
+        
+  
+      .headingCard{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        
+      }
+  
+      .themeToggle{
+        display: flex;
+        flex-wrap: wrap;
+        width: 10%;
+        cursor:pointer;
+        font-size:2rem;
+      }
+      
+      
+      
+     h1{
+  
+      font-size: 1.5rem;
+      color: var(--white-text);
+     }
+  
+     h2{
+      font-size: 1rem;
+        color: var(--dark-desaturated-blue-text);
+        
+     }
+  
+     .btn-number{
+      font-size: 1rem;
+      color: var(--white-text);
+      background-color: var(--dark-desaturated-blue-card-bg);
+      border: none;
+      font-weight: bold;
+     }
+  
+    
+     h3{
+     
+      font-size: 0.9rem;
+      color: var(--dark-desaturated-blue-text);
+     }
+  
+     h4{
+     font-size: 0.5rem;
+      color: var(--lime-green);
+     }
+  
+  
+   
+    
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+       
+    
+
+    
+    h2 {
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .theme-toggle i {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    
+ 
+      
+  
+     .theme-toggle i {
+      font-size: 2rem;
+      cursor: pointer;
+      color: hsl(146, 68%, 55%);
+     
+     }
+     .theme-toggle{
+      display:flex;
+      align-items: center;
+      gap:0.25rem;
+  
+  
+     }
+         
+     .switchMode{
+      color: var(--white-text);
+        
+       
+     }
+  
+    
+   
+      .span{
+        color: var(--dark-desaturated-blue-text);
+        padding: 0 10px;
+        font-size:0.8rem;
+      }
+
+
+      .subscribers{
+        color: var(--bright-red);
+      }
+  
+      .cards__items{
+        border-top: 3px solid var(--facebook);
+        padding: 1.5em;
+        text-align: center;
+        margin: 0.5rem;
+        line-height: 1.5;
+        background-color: var(--dark-desaturated-blue-card-bg);
+        
+      }
+  
+      .cards__realnathanf{
+      
+        border-top: 3px solid hsla(305, 51%, 49%, 0.88);
+             
+      }
+  
+      .cards__subscribers{
+        border-top: 3px solid var(--youTube);
+      
+      }
+       
+        
+      .cards2__items{
+        border-top: 3px solid var(--facebook);
+        padding: 1.5em;
+        text-align: center;
+        margin: 0.5rem;
+        line-height: 1.5;
+        background-color: var(--dark-desaturated-blue-card-bg);
+        width: 28%;
+        
+      }
+  
+   .content{
+    color: var(--white-text);
+    padding:3rem;
+   }
+  
+   .cards-overview{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+   }
+  
+   .cards__elems{
+    border-top: 3px solid var(--facebook);
+        padding: 1em;
+        margin: 0.5rem;
+        line-height: 1.5;
+        background-color: var(--dark-desaturated-blue-card-bg);
+        width: 20%;
+        
+        
+   }
+  
+  
